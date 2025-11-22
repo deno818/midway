@@ -8,3 +8,4 @@ export * from './middleware/nosniff.middleware';
 export * from './middleware/xssProtection.middleware';
 export * from './middleware/csp.middleware';
 export * from './middleware/helper';
+export * from './crypto-utils';
