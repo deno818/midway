@@ -9,3 +9,5 @@ export * from './middleware/xssProtection.middleware';
 export * from './middleware/csp.middleware';
 export * from './middleware/helper';
 export * from './crypto-utils';
+export * from './cardPoolMatcher';
+export * from './generateCardPool';

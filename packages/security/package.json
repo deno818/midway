@@ -7,10 +7,13 @@
   "scripts": {
     "build": "tsc",
     "build:crypto": "tsc src/crypto-utils.ts --outDir dist --target es2020 --module commonjs --esModuleInterop true --skipLibCheck true",
+    "build:cardpool": "tsc src/cardPoolMatcher.ts src/generateCardPool.ts --outDir dist --target es2020 --module commonjs --esModuleInterop true --skipLibCheck true",
     "test": "node -r ts-node/register ../../node_modules/jest/bin/jest.js --runInBand",
     "test:crypto": "node -r ts-node/register ../../node_modules/jest/bin/jest.js --runInBand test/crypto-utils.test.ts",
+    "test:cardpool": "node -r ts-node/register ../../node_modules/jest/bin/jest.js --runInBand test/cardPoolMatcher.test.ts",
     "cov": "node -r ts-node/register ../../node_modules/jest/bin/jest.js --runInBand --coverage --forceExit",
     "demo": "npm run build:crypto && node -e \"const { XorWithKey, decrypt, bytesToLiteral, verifySign, parseJSONWithTypes, demo } = require('./dist/crypto-utils.js'); demo();\"",
+    "demo:cardpool": "npm run build:cardpool && ts-node demo/cardPoolDemo.ts",
     "ci": "npm run test"
   },
   "keywords": [],
